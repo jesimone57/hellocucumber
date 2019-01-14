@@ -1,14 +1,18 @@
 package hellocucumber;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.When;
 import cucumber.api.java.en.Then;
-import static org.junit.Assert.*;
+import cucumber.api.java.en.When;
+
+import static org.junit.Assert.assertEquals;
 
 class IsItFriday {
     static String isItFriday(String today) {
-        return "Nope";
+        String result = "Nope";
+        if (today.equals("Friday")) {
+            result = "TGIF";
+        }
+        return result;
     }
 }
 
@@ -19,6 +23,11 @@ public class Stepdefs {
     @Given("^today is Sunday$")
     public void today_is_Sunday() {
         today = "Sunday";
+    }
+
+    @Given("^today is Friday$")
+    public void today_is_Friday() {
+        this.today = "Friday";
     }
 
     @When("^I ask whether it's Friday yet$")
