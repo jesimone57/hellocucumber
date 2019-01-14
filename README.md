@@ -1,7 +1,12 @@
 # hellocucumber
 Cucumber demo project with a feature and step definitions
 
-### Execute Test
+### Prerequisites
+* java 1.8+
+* git
+* maven 
+
+### To Execute the Test
 mvn test
 
 
