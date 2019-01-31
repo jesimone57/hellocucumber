@@ -51,7 +51,7 @@ public class Stepdefs {
     @When("^I ask whether it's Friday yet$")
     public void i_ask_whether_is_s_Friday_yet() {
         this.actualAnswer = DayUtil.isItFriday(today);
-        System.out.println(DayUtil.whatDayIsIt());
+        //System.out.println(DayUtil.whatDayIsIt());
     }
 
     @When("^It is not Friday$")
@@ -61,7 +61,7 @@ public class Stepdefs {
 
     @When("^It is Friday$")
     public void it_is_Friday() throws Exception {
-        this.actualAnswer = DayUtil.isItFriday(today);
+        this.actualAnswer = DayUtil.isItFriday("Friday");
     }
 
     @Then("^I should be told \"([^\"]*)\"$")
